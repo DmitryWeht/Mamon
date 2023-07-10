@@ -89,7 +89,7 @@ body {
   margin-bottom: 107px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 6% 17%;
+  gap: 6% 5%;
 }
 
 .services-container::before {
@@ -156,6 +156,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 60px 10%;
 }
+
 .clients-container::before {
   margin-left: 7%;
   background: #ffffff;
@@ -180,8 +181,8 @@ body {
   position: relative;
   border-top: 1px solid #c2c2c2;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px 150px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 60px 10%;
   padding: 100px 7% 100px 7%;
 }
 
@@ -233,31 +234,30 @@ body {
   gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
-
 .fit-item {
   background: rgb(226, 160, 160);
   padding: 25px;
 }
 
+/* работает до 600px */
 @media screen and (max-width: 600px) {
   .list-container {
+    /* элементы не является больше частью верстки */
     display: none;
+    /* элементы сохраняются но не видны*/
+    /* visibility: hidden; */
   }
-
   .header-container {
     justify-content: center;
   }
-
   .content-container h1 {
     text-align: center;
     font-size: 40px;
   }
-
   .content-container button {
     width: 100%;
     background: rgb(186, 122, 246);
   }
-
   .content-container p {
     font-size: 24px;
     color: black;
@@ -273,11 +273,15 @@ body {
   }
 }
 
+/* работает от  600px до 800px */
 @media screen and (min-width: 600px) and (max-width: 800px) {
   .list-container {
     visibility: hidden;
   }
   .list-container button {
     visibility: visible;
+  }
+  .content-container button {
+    background: rgb(164, 73, 249);
   }
 }
